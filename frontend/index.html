@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student CRUD App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Student Registration</h1>
+
+    <form id="student-form">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" id="name" required />
+      </div>
+
+      <div class="form-group">
+        <label>Roll Number</label>
+        <input type="text" id="roll" required />
+      </div>
+
+      <div class="form-group full">
+        <label>Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Male" required /> Male</label>
+          <label><input type="radio" name="gender" value="Female" required /> Female</label>
+          <label><input type="radio" name="gender" value="Other" required /> Other</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="text" id="mobile" maxlength="10" pattern="\d{10}" required />
+      </div>
+
+      <div class="form-group">
+        <label>Stream</label>
+        <select id="stream" required>
+          <option value="">Choose</option>
+          <option>CS</option>
+          <option>IT</option>
+          <option>ECS</option>
+          <option>ME</option>
+          <option>Civil</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="date" id="dob" required />
+      </div>
+
+      <div class="form-group">
+        <label>Avg Marks</label>
+        <input type="number" id="avgMarks" min="0" max="100" required />
+      </div>
+
+      <button type="submit" class="add-btn">➕ Add Student</button>
+    </form>
+
+    <h2 class="list-heading">📋 Student List</h2>
+    <ul id="student-list" class="student-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
